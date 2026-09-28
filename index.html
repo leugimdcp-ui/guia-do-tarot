@@ -1066,19 +1066,7 @@
       const checkout = checkoutCatalog[plan];
       if (!checkout) return;
 
-      if (typeof window.fbq === 'function') {
-        window.fbq('track', 'InitiateCheckout', {
-          value: checkout.value,
-          currency: 'BRL',
-          content_name: checkout.name,
-          content_ids: [plan],
-          content_type: 'product'
-        });
-      }
-
-      window.setTimeout(() => {
-        window.location.assign(checkout.url);
-      }, 180);
+      window.location.assign(checkout.url);
     }
 
     function toggleFAQ(button) {
