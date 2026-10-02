@@ -1066,7 +1066,15 @@
       const checkout = checkoutCatalog[plan];
       if (!checkout) return;
 
-      window.location.assign(checkout.url);
+      const destination = new URL(checkout.url);
+      const incoming = new URLSearchParams(window.location.search);
+      incoming.forEach((value, key) => {
+        if (value && (/^utm_/.test(key) || ['fbclid', 'sck', 'src'].includes(key))) {
+          destination.searchParams.set(key, value);
+        }
+      });
+
+      window.location.assign(destination.toString());
     }
 
     function toggleFAQ(button) {
