@@ -843,9 +843,9 @@
           <p class="text-white-soft/60 text-[10px] uppercase tracking-[0.2em] font-bold">Pagamento único</p>
           <div class="flex items-baseline justify-center gap-1 mt-1">
             <span class="text-lg font-bold text-gold">R$</span>
-            <span class="text-5xl md:text-6xl font-serif font-bold text-gold">37,00</span>
+            <span class="text-5xl md:text-6xl font-serif font-bold text-gold">47,90</span>
           </div>
-          <p class="text-xs text-white/90 mt-2">ou em até <span class="text-gold font-bold">9x de R$ 5,27</span></p>
+          <p class="text-xs text-white/90 mt-2">ou em até <span class="text-gold font-bold">9x de R$ 6,82</span></p>
         </div>
 
         <button
@@ -860,6 +860,17 @@
           <span class="flex items-center gap-1.5"><i data-lucide="zap" class="text-gold w-4 h-4"></i>Acesso imediato</span>
           <span class="flex items-center gap-1.5"><i data-lucide="lock" class="text-gold w-4 h-4"></i>Pagamento seguro</span>
         </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto mt-7 p-5 md:p-6 rounded-2xl border border-white/10 bg-white/[0.03] text-center">
+        <p class="text-sm md:text-base font-bold text-white">Quer começar apenas pelo Tarot?</p>
+        <p class="text-xs md:text-sm text-white-soft/60 mt-1 mb-4">O Guia Essencial traz as 78 cartas, significados e o método visual por R$27,90, sem os demais guias e materiais da coleção.</p>
+        <button
+          onclick="goToCheckout('essential')"
+          class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white text-xs md:text-sm font-bold transition cursor-pointer"
+        >
+          COMEÇAR COM O GUIA ESSENCIAL — R$27,90
+        </button>
       </div>
     </section>
 
@@ -1041,8 +1052,13 @@
     const checkoutCatalog = {
       complete: {
         url: 'https://pay.cakto.com.br/34yu6q2_1149180',
-        value: 37,
+        value: 47.9,
         name: 'Coleção Completa do Tarot'
+      },
+      essential: {
+        url: 'https://pay.cakto.com.br/37symdw',
+        value: 27.9,
+        name: 'Guia Essencial do Tarot'
       }
     };
 
