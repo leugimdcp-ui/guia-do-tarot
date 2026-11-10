@@ -50,14 +50,14 @@
             'xs': '375px',
           },
           colors: {
-            primary: '#0E4050',
-            'bg-dark': '#061620',
-            gold: '#D97745',
-            'gold-dark': '#A84D2A',
-            'button-text': '#1C1714',
-            lilac: '#63B7B2',
-            red: '#D35D55',
-            'white-soft': '#F5EFE7',
+            primary: '#641B2D',
+            'bg-dark': '#21060D',
+            gold: '#E5B85C',
+            'gold-dark': '#B98632',
+            'button-text': '#310B14',
+            lilac: '#EAD0A0',
+            red: '#D96B70',
+            'white-soft': '#FFF4DF',
           },
           fontFamily: {
             sans: ['Montserrat', 'sans-serif'],
@@ -71,7 +71,7 @@
 
   <style>
     .mystical-bg {
-      background: radial-gradient(circle at 50% 0%, #123B4C 0%, #061620 68%, #020A0E 100%);
+      background: radial-gradient(circle at 50% 0%, #4B1020 0%, #21060D 68%, #100206 100%);
       position: relative;
       overflow: hidden;
     }
@@ -100,7 +100,7 @@
       top: 0; left: 0; right: 0; bottom: 0;
       background-image: 
         radial-gradient(1px 1px at 10px 10px, #fff, rgba(0,0,0,0)),
-        radial-gradient(1.5px 1.5px at 150px 150px, #D97745, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 150px 150px, #E5B85C, rgba(0,0,0,0)),
         radial-gradient(2px 2px at 300px 300px, #fff, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 450px 450px, #eee, rgba(0,0,0,0));
       background-repeat: repeat;
@@ -135,21 +135,21 @@
     .animate-spin-slow { animation: spin-slow 15s linear infinite; }
 
     .btn-gold {
-      background-color: #D97745;
-      color: #1C1714;
+      background-color: #E5B85C;
+      color: #310B14;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.07em;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 10px 25px -5px rgba(217, 119, 69, 0.4);
+      box-shadow: 0 10px 25px -5px rgba(229, 184, 92, 0.4);
       border-radius: 9999px;
-      border-bottom: 4px solid #9E4528;
+      border-bottom: 4px solid #A87529;
     }
     .btn-gold:hover {
       transform: scale(1.04);
-      background-color: #EA8D59;
-      border-bottom-color: #7D321E;
-      box-shadow: 0 15px 30px -5px rgba(217, 119, 69, 0.55);
+      background-color: #F4D48B;
+      border-bottom-color: #895A20;
+      box-shadow: 0 15px 30px -5px rgba(229, 184, 92, 0.55);
     }
     .btn-gold:active {
       transform: scale(0.98);
@@ -157,36 +157,36 @@
     }
 
     .card-mystic {
-      background-color: rgba(14, 64, 80, 0.22);
-      border: 1px solid rgba(99, 183, 178, 0.28);
+      background-color: rgba(100, 27, 45, 0.22);
+      border: 1px solid rgba(234, 208, 160, 0.28);
       border-radius: 1rem;
       backdrop-filter: blur(8px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .glow-gold {
-      box-shadow: 0 0 32px rgba(217, 119, 69, 0.2);
+      box-shadow: 0 0 32px rgba(229, 184, 92, 0.2);
     }
 
     .text-gold-gradient {
-      background: linear-gradient(135deg, #F6C29F 0%, #D97745 52%, #9E4528 100%);
+      background: linear-gradient(135deg, #FFF0BE 0%, #E5B85C 52%, #A87529 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .vintage-section {
-      background-color: #F2E8DA;
+      background-color: #F8EDD9;
       position: relative;
       box-shadow: inset 0 0 80px rgba(92, 55, 31, 0.12);
-      border-top: 2px solid rgba(217, 119, 69, 0.28);
-      border-bottom: 2px solid rgba(217, 119, 69, 0.28);
+      border-top: 2px solid rgba(229, 184, 92, 0.28);
+      border-bottom: 2px solid rgba(229, 184, 92, 0.28);
     }
 
     .vintage-section::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; height: 50px;
-      background: linear-gradient(to bottom, rgba(6, 22, 32, 0.28), transparent);
+      background: linear-gradient(to bottom, rgba(33, 6, 13, 0.28), transparent);
       pointer-events: none;
       z-index: 1;
     }
@@ -195,7 +195,7 @@
       content: "";
       position: absolute;
       bottom: 0; left: 0; right: 0; height: 50px;
-      background: linear-gradient(to top, rgba(6, 22, 32, 0.28), transparent);
+      background: linear-gradient(to top, rgba(33, 6, 13, 0.28), transparent);
       pointer-events: none;
       z-index: 1;
     }
@@ -285,7 +285,7 @@
     </div>
     <header class="relative z-20 px-4 max-w-4xl mx-auto text-center mt-6 xs:mt-8 md:mt-12 mb-2 flex flex-col items-center">
       <h1 class="text-center mx-auto text-[22.7px] xs:text-[26.8px] sm:text-[30.9px] md:text-[37.1px] lg:text-[49.4px] font-poppins font-extrabold text-white tracking-[-0.01em] leading-[1.02] mb-[25px]">
-        Aprenda a ler todas as cartas de <span class="text-[#E28A50]">tarot</span> sem precisar decorar significados
+        Aprenda a ler todas as cartas de <span class="text-[#F2CC7B]">tarot</span> sem precisar decorar significados
       </h1>
       <p class="text-base md:text-xl text-white-soft/95 max-w-2xl mx-auto bg-lilac/15 py-2.5 px-8 sm:px-10 rounded-xl border border-lilac/30 backdrop-blur-md shadow-lg relative z-20 leading-snug flex items-center justify-center text-center">
         Transforme símbolos em interpretações completas, mesmo começando do zero, com um método visual e intuitivo que acompanha você em cada leitura.
@@ -348,7 +348,7 @@
       <div class="flex flex-col items-center w-full max-w-6xl mx-auto">
         <div class="text-center mb-3 max-w-2xl mx-auto px-4">
           <p class="text-gold-dark font-extrabold tracking-wider mb-5 text-xs md:text-sm">✨ Veja como é por dentro</p>
-          <h2 class="text-[28px] xs:text-[34px] md:text-[45px] lg:text-[57px] font-poppins font-extrabold text-[#123B4C] tracking-[-0.02em] leading-[0.88] mb-4">
+          <h2 class="text-[28px] xs:text-[34px] md:text-[45px] lg:text-[57px] font-poppins font-extrabold text-[#4B1020] tracking-[-0.02em] leading-[0.88] mb-4">
             🔮 Veja a <span class="text-[1.15em] inline-block">Coleção Completa</span> por dentro
           </h2>
           <p class="text-sm md:text-base text-bg-dark/75 leading-relaxed">
@@ -483,7 +483,7 @@
     <section class="relative z-10 px-4 pt-20 pb-12 md:pt-28 md:pb-16 vintage-section">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-2xl xs:text-3xl md:text-4xl font-poppins font-extrabold text-center mb-3 text-bg-dark tracking-tight leading-[1.08]">
-          <span class="text-[1.05em] inline-block mr-[9px]">🎁</span>Uma coleção para aprofundar sua <span class="text-[#C76536] font-extrabold">prática:</span>
+          <span class="text-[1.05em] inline-block mr-[9px]">🎁</span>Uma coleção para aprofundar sua <span class="text-[#8C293D] font-extrabold">prática:</span>
         </h2>
         <p class="text-gold-dark text-xs md:text-sm uppercase tracking-widest mb-10 md:mb-14 text-center">Do primeiro contato com as cartas a leituras mais completas e conectadas</p>
         <div class="flex flex-col lg:flex-row-reverse items-center gap-10 mb-20 max-w-5xl mx-auto">
@@ -778,7 +778,7 @@
       <div class="flex flex-col items-center w-full max-w-6xl mx-auto">
         <div class="text-center mb-3 max-w-2xl mx-auto px-4">
           <p class="text-gold-dark font-extrabold tracking-wider mb-5 text-xs md:text-sm">✨ Depoimentos de alunos</p>
-          <h2 class="text-[28px] xs:text-[34px] md:text-[45px] lg:text-[57px] font-poppins font-extrabold text-[#123B4C] tracking-[-0.02em] leading-[0.88] mb-4">
+          <h2 class="text-[28px] xs:text-[34px] md:text-[45px] lg:text-[57px] font-poppins font-extrabold text-[#4B1020] tracking-[-0.02em] leading-[0.88] mb-4">
             Quem já <span class="text-[1.15em] inline-block text-gold-dark">aprendeu</span> com a gente
           </h2>
           <p class="text-sm md:text-base text-bg-dark/75 leading-relaxed">
