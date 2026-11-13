@@ -1251,15 +1251,15 @@
       </div>
       <div class="collection-cta-timer">
         <span id="collection-timer-label">Seu próximo passo</span>
-        <time id="collection-countdown" role="timer" aria-label="Contagem regressiva de cinco minutos" datetime="PT5M">05:00</time>
+        <time id="collection-countdown" role="timer" aria-label="Contagem regressiva de dez minutos" datetime="PT10M">10:00</time>
       </div>
       <a class="btn-gold collection-cta-link" href="#precos">QUERO MINHA COLEÇÃO <span aria-hidden="true">→</span></a>
     </div>
   </aside>
   <script>
     (() => {
-      const duration = 5 * 60 * 1000;
-      const storageKey = 'tarot-collection-countdown-v1';
+      const duration = 10 * 60 * 1000;
+      const storageKey = 'tarot-collection-countdown-10min-v2';
       const timer = document.getElementById('collection-countdown');
       let deadline = Date.now() + duration;
       try {
@@ -1342,7 +1342,7 @@
         toast.hidden = false;
         try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
         hideTimeout = setTimeout(() => { toast.hidden = true; }, 4000);
-        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 5000);
+        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 25000);
       }
       toast.querySelector('button').addEventListener('click', () => {
         dismissed = true;
@@ -1351,7 +1351,7 @@
         clearTimeout(hideTimeout);
         try { sessionStorage.setItem(dismissedKey, 'yes'); } catch (_) {}
       });
-      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 5000);
+      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 25000);
     })();
   </script>
 
