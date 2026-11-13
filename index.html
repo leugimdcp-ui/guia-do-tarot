@@ -249,6 +249,32 @@
       width: max-content;
       animation: marquee-loop-images 30s linear infinite;
     }
+
+    /* Fixed collection CTA */
+    body { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); }
+    #precos { scroll-margin-top: 64px; }
+    .collection-cta { position: fixed; inset: auto 0 0; z-index: 110; background: rgba(33,6,13,.97); border-top: 1px solid rgba(229,184,92,.5); box-shadow: 0 -12px 40px rgba(0,0,0,.3); padding: 14px 20px calc(14px + env(safe-area-inset-bottom, 0px)); }
+    .collection-cta-inner { max-width: 1000px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .collection-cta-copy strong { display: block; color: #FFF4DF; font-size: 18px; font-family: 'Playfair Display',serif; }
+    .collection-cta-copy small { display: block; margin-top: 4px; color: #EAD0A0; font-size: 11px; }
+    .collection-cta-timer { flex-shrink: 0; text-align: center; color: #E5B85C; }
+    .collection-cta-timer span { display: block; font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .collection-cta-timer time { display: block; font-size: 30px; line-height: 1.2; font-weight: 800; font-variant-numeric: tabular-nums; }
+    .collection-cta-link { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 14px 26px; border-radius: 14px; font-size: 13px; text-align: center; text-decoration: none; }
+    .collection-cta-link:focus-visible { outline: 3px solid #FFF4DF; outline-offset: 4px; }
+    @media (max-width: 640px) {
+      .collection-cta { padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0px)); }
+      .collection-cta-inner { gap: 14px; }
+      .collection-cta-copy { display: none; }
+      .collection-cta-timer time { font-size: 27px; }
+      .collection-cta-timer span { font-size: 8px; }
+      .collection-cta-link { flex: 1; min-width: 0; padding: 14px 12px; font-size: 11px; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html.scroll-smooth { scroll-behavior: auto; }
+      .collection-cta-link { transition: none; }
+      .collection-cta-link:hover { transform: none; }
+    }
   </style>
 
   <script
@@ -1201,6 +1227,46 @@
 
   </script>
 
+
+
+  <aside class="collection-cta" aria-label="Escolha sua coleção do Tarot">
+    <div class="collection-cta-inner">
+      <div class="collection-cta-copy">
+        <strong>Sua próxima leitura começa aqui</strong>
+        <small>Escolha Essencial ou Premium · a partir de R$ 27,90</small>
+      </div>
+      <div class="collection-cta-timer">
+        <span id="collection-timer-label">Seu próximo passo</span>
+        <time id="collection-countdown" role="timer" aria-label="Contagem regressiva de cinco minutos" datetime="PT5M">05:00</time>
+      </div>
+      <a class="btn-gold collection-cta-link" href="#precos">QUERO MINHA COLEÇÃO <span aria-hidden="true">→</span></a>
+    </div>
+  </aside>
+  <script>
+    (() => {
+      const duration = 5 * 60 * 1000;
+      const storageKey = 'tarot-collection-countdown-v1';
+      const timer = document.getElementById('collection-countdown');
+      let deadline = Date.now() + duration;
+      try {
+        const stored = Number(sessionStorage.getItem(storageKey));
+        if (Number.isFinite(stored) && stored > 0) deadline = Math.min(stored, deadline);
+        sessionStorage.setItem(storageKey, String(deadline));
+      } catch (_) { /* Keep the timer working when browser storage is unavailable. */ }
+      let interval;
+      function updateCountdown() {
+        const remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+        timer.textContent = String(Math.floor(remaining / 60)).padStart(2, '0') + ':' + String(remaining % 60).padStart(2, '0');
+        timer.setAttribute('datetime', 'PT' + remaining + 'S');
+        if (remaining === 0) {
+          clearInterval(interval);
+          document.getElementById('collection-timer-label').textContent = 'Comece agora';
+        }
+      }
+      interval = setInterval(updateCountdown, 1000);
+      updateCountdown();
+    })();
+  </script>
 
 </body>
 
