@@ -1288,7 +1288,7 @@
     <div class="purchase-toast-copy" role="status" aria-live="polite" aria-atomic="true">
       <p><strong id="purchase-toast-name"></strong> comprou</p>
       <p id="purchase-toast-product"></p>
-      <small id="purchase-toast-date"></small>
+      <small id="purchase-toast-status"></small>
     </div>
     <button type="button" class="purchase-toast-close" aria-label="Fechar notificações de compra">×</button>
   </aside>
@@ -1298,43 +1298,35 @@
       const purchases = [
         {
                 "name": "Elivan Fengler",
-                "product": "Coleção Oferta Única — Tarot",
-                "date": "11/11/2026"
+                "product": "Coleção Oferta Única — Tarot"
         },
         {
                 "name": "Jean Naumann",
-                "product": "Coleção Oferta Única — Tarot",
-                "date": "11/11/2026"
+                "product": "Coleção Oferta Única — Tarot"
         },
         {
                 "name": "Rosemeire Aparecida",
-                "product": "Coleção Oferta Única — Tarot",
-                "date": "11/11/2026"
+                "product": "Coleção Oferta Única — Tarot"
         },
         {
                 "name": "Aparecida Deusa",
-                "product": "Guia do Tarot",
-                "date": "11/11/2026"
+                "product": "Guia do Tarot"
         },
         {
                 "name": "Louise Gilce",
-                "product": "Guia do Tarot",
-                "date": "11/11/2026"
+                "product": "Guia do Tarot"
         },
         {
                 "name": "Luiz Sergio",
-                "product": "Coleção Oferta Única — Tarot",
-                "date": "11/11/2026"
+                "product": "Coleção Oferta Única — Tarot"
         },
         {
                 "name": "Sabrina Mezzari",
-                "product": "Guia do Tarot",
-                "date": "11/11/2026"
+                "product": "Guia do Tarot"
         },
         {
                 "name": "Nubia Franciele",
-                "product": "Guia do Tarot",
-                "date": "10/11/2026"
+                "product": "Guia do Tarot"
         }
 ];
       const toast = document.getElementById('purchase-toast');
@@ -1362,7 +1354,7 @@
         const purchase = purchases[index++];
         document.getElementById('purchase-toast-name').textContent = purchase.name;
         document.getElementById('purchase-toast-product').textContent = purchase.product;
-        document.getElementById('purchase-toast-date').textContent = 'Compra aprovada em ' + purchase.date;
+        document.getElementById('purchase-toast-status').textContent = 'Compra aprovada';
         toast.hidden = false;
         try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
         hideTimeout = setTimeout(() => { toast.hidden = true; }, 6500);
