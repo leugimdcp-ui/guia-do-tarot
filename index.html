@@ -1297,28 +1297,12 @@
       // Approved purchases reviewed in Cakto; this is a curated list, not a live feed.
       const purchases = [
         {
-                "name": "Elivan Fengler",
-                "product": "Coleção Oferta Única — Tarot"
-        },
-        {
-                "name": "Jean Naumann",
-                "product": "Coleção Oferta Única — Tarot"
-        },
-        {
-                "name": "Rosemeire Aparecida",
-                "product": "Coleção Oferta Única — Tarot"
-        },
-        {
                 "name": "Aparecida Deusa",
                 "product": "Guia do Tarot"
         },
         {
                 "name": "Louise Gilce",
                 "product": "Guia do Tarot"
-        },
-        {
-                "name": "Luiz Sergio",
-                "product": "Coleção Oferta Única — Tarot"
         },
         {
                 "name": "Sabrina Mezzari",
@@ -1331,7 +1315,7 @@
 ];
       const toast = document.getElementById('purchase-toast');
       const cta = document.querySelector('.collection-cta');
-      const progressKey = 'tarot-purchase-notices-v1';
+      const progressKey = 'tarot-purchase-notices-high-ticket-v2';
       const dismissedKey = 'tarot-purchase-notices-dismissed-v1';
       let index = 0;
       let dismissed = false;
@@ -1357,8 +1341,8 @@
         document.getElementById('purchase-toast-status').textContent = 'Compra aprovada';
         toast.hidden = false;
         try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
-        hideTimeout = setTimeout(() => { toast.hidden = true; }, 6500);
-        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 28000);
+        hideTimeout = setTimeout(() => { toast.hidden = true; }, 4000);
+        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 5000);
       }
       toast.querySelector('button').addEventListener('click', () => {
         dismissed = true;
@@ -1367,7 +1351,7 @@
         clearTimeout(hideTimeout);
         try { sessionStorage.setItem(dismissedKey, 'yes'); } catch (_) {}
       });
-      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 8000);
+      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 5000);
     })();
   </script>
 
