@@ -949,7 +949,7 @@
         toast.hidden = false;
         try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
         hideTimeout = setTimeout(() => { toast.hidden = true; }, 4000);
-        nextTimeout = setTimeout(showNextPurchase, 15000);
+        nextTimeout = setTimeout(showNextPurchase, 7000);
       }
       toast.querySelector('button').addEventListener('click', () => {
         dismissed = true;
@@ -958,7 +958,7 @@
         clearTimeout(hideTimeout);
         try { sessionStorage.setItem(dismissedKey, 'yes'); } catch (_) {}
       });
-      if (!dismissed && purchases.length) nextTimeout = setTimeout(showNextPurchase, 15000);
+      if (!dismissed && purchases.length) nextTimeout = setTimeout(showNextPurchase, 7000);
     })();
   </script>
 
