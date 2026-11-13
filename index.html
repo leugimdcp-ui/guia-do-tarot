@@ -929,7 +929,7 @@
       let hideTimeout;
       try {
         const savedIndex = Number(sessionStorage.getItem(progressKey));
-        if (Number.isInteger(savedIndex) && savedIndex >= 0) index = savedIndex;
+        if (Number.isInteger(savedIndex) && savedIndex >= 0) index = savedIndex % purchases.length;
         dismissed = sessionStorage.getItem(dismissedKey) === 'yes';
       } catch (_) {}
       function positionNotice() {
@@ -939,16 +939,17 @@
       if (window.ResizeObserver && cta) new ResizeObserver(positionNotice).observe(cta);
       else window.addEventListener('resize', positionNotice);
       function showNextPurchase() {
-        if (dismissed || index >= purchases.length) return;
+        if (dismissed || !purchases.length) return;
         if (document.hidden) { nextTimeout = setTimeout(showNextPurchase, 5000); return; }
-        const purchase = purchases[index++];
+        const purchase = purchases[index];
+        index = (index + 1) % purchases.length;
         document.getElementById('purchase-toast-name').textContent = purchase.name;
         document.getElementById('purchase-toast-product').textContent = purchase.product;
         document.getElementById('purchase-toast-status').textContent = 'Compra aprovada';
         toast.hidden = false;
         try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
         hideTimeout = setTimeout(() => { toast.hidden = true; }, 4000);
-        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 25000);
+        nextTimeout = setTimeout(showNextPurchase, 15000);
       }
       toast.querySelector('button').addEventListener('click', () => {
         dismissed = true;
@@ -957,7 +958,7 @@
         clearTimeout(hideTimeout);
         try { sessionStorage.setItem(dismissedKey, 'yes'); } catch (_) {}
       });
-      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 25000);
+      if (!dismissed && purchases.length) nextTimeout = setTimeout(showNextPurchase, 15000);
     })();
   </script>
 
