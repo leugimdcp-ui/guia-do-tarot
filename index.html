@@ -275,6 +275,20 @@
       .collection-cta-link { transition: none; }
       .collection-cta-link:hover { transform: none; }
     }
+
+    .purchase-toast { position: fixed; left: 20px; bottom: calc(var(--collection-cta-height, 100px) + 14px); z-index: 109; width: min(370px, calc(100vw - 40px)); display: flex; align-items: center; gap: 12px; padding: 16px 48px 16px 16px; border: 1px solid rgba(229,184,92,.45); border-radius: 16px; background: #310B14; color: #FFF4DF; box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    .purchase-toast[hidden] { display: none; }
+    .purchase-toast-icon { flex: 0 0 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #E5B85C; background: rgba(229,184,92,.12); font-size: 18px; }
+    .purchase-toast-copy { min-width: 0; font-size: 12px; line-height: 1.5; }
+    .purchase-toast-copy strong { color: #E5B85C; }
+    .purchase-toast-copy p { margin: 0; }
+    .purchase-toast-copy small { display: block; margin-top: 4px; font-size: 10px; color: #EAD0A0; }
+    .purchase-toast-close { position: absolute; right: 0; top: 0; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #EAD0A0; cursor: pointer; font-size: 22px; }
+    .purchase-toast-close:hover { color: #FFF4DF; }
+    .purchase-toast-close:focus-visible { outline: 2px solid #E5B85C; outline-offset: -4px; }
+    @media (max-width: 640px) {
+      .purchase-toast { left: 12px; bottom: calc(var(--collection-cta-height, 90px) + 10px); width: min(370px, calc(100vw - 24px)); padding: 12px 44px 12px 12px; gap: 10px; }
+    }
   </style>
 
   <script
@@ -1265,6 +1279,103 @@
       }
       interval = setInterval(updateCountdown, 1000);
       updateCountdown();
+    })();
+  </script>
+
+
+  <aside id="purchase-toast" class="purchase-toast" aria-label="Compras de clientes" hidden>
+    <span class="purchase-toast-icon" aria-hidden="true">✓</span>
+    <div class="purchase-toast-copy" role="status" aria-live="polite" aria-atomic="true">
+      <p><strong id="purchase-toast-name"></strong> comprou</p>
+      <p id="purchase-toast-product"></p>
+      <small id="purchase-toast-date"></small>
+    </div>
+    <button type="button" class="purchase-toast-close" aria-label="Fechar notificações de compra">×</button>
+  </aside>
+  <script>
+    (() => {
+      // Approved purchases reviewed in Cakto; this is a curated list, not a live feed.
+      const purchases = [
+        {
+                "name": "Elivan Fengler",
+                "product": "Coleção Oferta Única — Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Jean Naumann",
+                "product": "Coleção Oferta Única — Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Rosemeire Aparecida",
+                "product": "Coleção Oferta Única — Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Aparecida Deusa",
+                "product": "Guia do Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Louise Gilce",
+                "product": "Guia do Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Luiz Sergio",
+                "product": "Coleção Oferta Única — Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Sabrina Mezzari",
+                "product": "Guia do Tarot",
+                "date": "11/11/2026"
+        },
+        {
+                "name": "Nubia Franciele",
+                "product": "Guia do Tarot",
+                "date": "10/11/2026"
+        }
+];
+      const toast = document.getElementById('purchase-toast');
+      const cta = document.querySelector('.collection-cta');
+      const progressKey = 'tarot-purchase-notices-v1';
+      const dismissedKey = 'tarot-purchase-notices-dismissed-v1';
+      let index = 0;
+      let dismissed = false;
+      let nextTimeout;
+      let hideTimeout;
+      try {
+        const savedIndex = Number(sessionStorage.getItem(progressKey));
+        if (Number.isInteger(savedIndex) && savedIndex >= 0) index = savedIndex;
+        dismissed = sessionStorage.getItem(dismissedKey) === 'yes';
+      } catch (_) {}
+      function positionNotice() {
+        if (cta) document.documentElement.style.setProperty('--collection-cta-height', cta.getBoundingClientRect().height + 'px');
+      }
+      positionNotice();
+      if (window.ResizeObserver && cta) new ResizeObserver(positionNotice).observe(cta);
+      else window.addEventListener('resize', positionNotice);
+      function showNextPurchase() {
+        if (dismissed || index >= purchases.length) return;
+        if (document.hidden) { nextTimeout = setTimeout(showNextPurchase, 5000); return; }
+        const purchase = purchases[index++];
+        document.getElementById('purchase-toast-name').textContent = purchase.name;
+        document.getElementById('purchase-toast-product').textContent = purchase.product;
+        document.getElementById('purchase-toast-date').textContent = 'Compra aprovada em ' + purchase.date;
+        toast.hidden = false;
+        try { sessionStorage.setItem(progressKey, String(index)); } catch (_) {}
+        hideTimeout = setTimeout(() => { toast.hidden = true; }, 6500);
+        if (index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 28000);
+      }
+      toast.querySelector('button').addEventListener('click', () => {
+        dismissed = true;
+        toast.hidden = true;
+        clearTimeout(nextTimeout);
+        clearTimeout(hideTimeout);
+        try { sessionStorage.setItem(dismissedKey, 'yes'); } catch (_) {}
+      });
+      if (!dismissed && index < purchases.length) nextTimeout = setTimeout(showNextPurchase, 8000);
     })();
   </script>
 
